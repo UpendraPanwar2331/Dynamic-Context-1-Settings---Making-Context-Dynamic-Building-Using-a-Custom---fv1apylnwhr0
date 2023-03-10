@@ -5,10 +5,10 @@ const UserContext = createContext()
 
 const Wrapper = (props) => {
 
-    const greeting = "Hello"
+    const [greeting,changeGreeting] = "Hello"
   
     return (
-        <UserContext.Provider value={{ greeting }}>
+        <UserContext.Provider value={{ greeting, changeGreeting }}>
             {props.children}
         </UserContext.Provider>
     )
